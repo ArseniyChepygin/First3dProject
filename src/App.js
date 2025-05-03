@@ -3,8 +3,10 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import { OrbitControls } from "@react-three/drei";
 
-import Cube from "./Components/Cube";
-import Face from "./Components/Face";
+// import Cube from "./Components/Cube";
+// import Face from "./Components/Face";
+import Boy from "./Components/Boy";
+import Scene from "./Components/Scene";
 
 import { useControls } from "leva";
 import React from "react";
@@ -35,10 +37,11 @@ function App() {
 
   return (
     <div id="canvas-container" className="App">
+      <Scene />
       <Canvas camera={{ position: [5, 3, 5], fov: 50 }}>
         {/* <RotatingBox /> */}
         {/* <Cube colors={colors}/> */}
-        <Face colors={colors}/>
+        <Boy position={[0,0,0]}/>
         <ambientLight intensity={0.3} />
         {/* <directionalLight position={[0, 0, 5]} color="red"/> */}
         <directionalLight position={[0, 0, 5]} intensity={1}/>
